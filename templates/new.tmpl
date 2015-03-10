@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ecognizance</title>
+	<link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="/creator/main.css">
+  <script src="/vendor/react/react.js"></script>
+  <script src="/creator/main.js"></script>
+</head>
+<body>
+	<div class="topbar">
+		<nav class="navbar navbar-inverse">
+			<a class="navbar-brand" href="#">Sixth.io</a>
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="#">Home</a>
+				</li>
+        <li>
+          <a href="mailto:s@sraj.me">@sraj</a>
+        </li>
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+		<h1 style="text-align: center;">Ecognizance</h1>
+		<div class="new-edition-form">
+			<div>
+				<form method="POST" action="/add">
+				  
+          <h1>Editor</h1>
+				  
+          <div class="form-group">
+				    <input type="text" class="form-control" placeholder="Enter edition title" name="Title" />
+				  </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter cover photo URL" name="Cover" />
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter post title" name="Editorial.Title" />
+          </div>
+          <div class="form-group">
+				    <input type="text" class="form-control" placeholder="Enter author name" name="Editorial.Author" />
+				  </div>
+          <div class="form-group">
+				    <input type="email" class="form-control" placeholder="Enter author email" name="Editorial.Email" />
+				  </div>
+          <div class="form-group">
+				    <textarea class="form-control" rows="10" placeholder="Enter post" name="Editorial.Post"></textarea>
+				  </div>
+
+          <h1>Featured</h1>
+          
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter title" name="Featured.Title" />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter author name" name="Featured.Author" />
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Enter author email" name="Featured.Email" />
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="10" placeholder="Enter post" name="Featured.Post"></textarea>
+          </div>
+
+          <div class="section-number">
+            <h1>Ecohustle</h1>
+            <input type="number" class="ecohustle-selector number-selector" min="1" max="25" placeholder="Number of posts" />
+            <button type="button" onclick="updateEcohustleGroup();" class="btn btn-default">Update</button>
+          </div>
+
+          <div id="ecohustle-input"></div>
+
+          <div class="section-number">
+            <h1>Supplementary</h1>
+            <input type="number" class="supplementary-selector number-selector" min="1" max="25" placeholder="Number of posts" />
+            <button type="button" onclick="updateSupplementaryGroup();" class="btn btn-default">Update</button>
+          </div>
+
+          <div id="supplementary-input"></div>
+          
+
+          <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-share" aria-hidden="true"></span>Submit
+          </button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

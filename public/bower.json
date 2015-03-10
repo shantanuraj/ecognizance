@@ -1,0 +1,21 @@
+{
+  "name": "ecog",
+  "version": "0.0.0",
+  "authors": [
+    "Shantanu <shantanuraj@ovi.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "react": "~0.12.2"
+  }
+}
