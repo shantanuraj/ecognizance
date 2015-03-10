@@ -34,7 +34,7 @@
         </header>
         <div class="grid">
           {{ range . }}
-          <div class="editions" style="background: url('{{ .Cover }}') center center no-repeat;">
+          <div class="editions" style="background-image: url('{{ .Cover }}');">
             <a href="//ecognizance.dscecon.com/read/{{ .Title }}"><h1>Edition {{ .Title }}</h1></a>
           </div>
           {{ end }}
