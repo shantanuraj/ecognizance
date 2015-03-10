@@ -34,9 +34,11 @@
         </header>
         <div class="grid">
           {{ range . }}
-          <div class="editions" style="background-image: url('{{ .Cover }}');">
-            <a href="//ecognizance.dscecon.com/read/{{ .Title }}"><h1>Edition {{ .Title }}</h1></a>
-          </div>
+          <a href="//ecognizance.dscecon.com/read/{{ .Title }}">
+            <div class="editions" style="background-image: url('{{ .Cover }}');">
+              <h1>Edition {{ .Title }}</h1>
+            </div>
+          </a>
           {{ end }}
         </div>
         <footer><a href="https://dscecon.com"><h4>Economics Department</h4></a><h4>Dyal Singh College</h4></footer>
