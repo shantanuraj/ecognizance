@@ -22,7 +22,7 @@
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <link rel="stylesheet" href="/styles/cutom-font.css">
-    <link rel="stylesheet" href="/styles/all.css?nocache">
+    <link rel="stylesheet" href="/styles/all.css?nc">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   </head>
@@ -34,10 +34,8 @@
         </header>
         <div class="grid">
           {{ range . }}
-          <a href="//ecognizance.dscecon.com/read/{{ .Title }}">
-            <div class="editions" style="background-image: url('{{ .Cover }}');">
+          <a class="editions" href="//ecognizance.dscecon.com/read/{{ .Title }}" style="background-image: url('{{ .Cover }}');">
               <h1>Edition {{ .Title }}</h1>
-            </div>
           </a>
           {{ end }}
         </div>
