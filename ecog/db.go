@@ -172,7 +172,7 @@ func getEcohustle(e *Edition, count int) {
 
 func GetAllMagazines() []Edition {
 	rows, err := EcogDb.Query(`select title, cover
-							from editions`)
+							from editions order by id`)
 
 	PanicIf(err)
 	defer rows.Close()
