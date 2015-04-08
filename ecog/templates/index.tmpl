@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="Edition {{ .Title }}, {{ .Featured.Title }} ">
+    <meta name= "author" content=".Editorial.Author">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edition - {{ .Title }}</title>
 
@@ -71,12 +72,15 @@
             {{ range .Articles }}
             <div class="article">
               <h1>{{ .Title }}</h1>
+              {{ if (ne .Author "") }}
               <h5>By {{ .Author }}</h5>
+              {{ end }}
               <article>
                 {{ .PostHTML }}
               </article>
             </div>
             {{ end }}
+            {{ if (gt (len .Ecohustle) 0) }}
             <div class="eco-hustle">
               <h1>Ecohustle</h1>
               <div class="slider fade">
@@ -88,6 +92,7 @@
                 {{ end }}
               </div>
             </div>
+            {{ end }}
           </div>
         </div>
       </div>
