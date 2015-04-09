@@ -21,7 +21,13 @@ func GetHandlers() *mux.Router {
 	router.HandleFunc("/7d8830b69114244387aa33c18fc4b0cf", addViewHandler)
 	router.HandleFunc("/add", addPostHandler)
 	router.HandleFunc("/read/{title}", readHandler)
+	router.HandleFunc("/{[a-z]+}", notFoundHandler)
 	return router
+}
+
+func rootViewHandler(w http.ResponseWriter, r *http.Request) {
+	editons := GetAllMagazines()
+	ren.HTML(w, http.StatusOK, "all", editons)
 }
 
 func addViewHandler(w http.ResponseWriter, r *http.Request) {
@@ -49,10 +55,13 @@ func readHandler(w http.ResponseWriter, r *http.Request) {
 	title := vars["title"]
 
 	edition := GetEditionByTitle(title)
-	ren.HTML(w, http.StatusOK, "index", edition)
+	if edition.Title != "" {
+		ren.HTML(w, http.StatusOK, "index", edition)
+	} else {
+		notFoundHandler(w, r)
+	}
 }
 
-func rootViewHandler(w http.ResponseWriter, r *http.Request) {
-	editons := GetAllMagazines()
-	ren.HTML(w, http.StatusOK, "all", editons)
+func notFoundHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/404.html", http.StatusTemporaryRedirect)
 }
