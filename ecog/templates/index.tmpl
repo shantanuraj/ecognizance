@@ -3,24 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Edition {{ .Title }}, {{ .Featured.Title }} ">
-    <meta name= "author" content=".Editorial.Author">
+    <meta name="description" content="Edition {{ .Title }}, {{ .Featured.Title }}">
+    <meta name= "author" content="{{ .Editorial.Author }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edition - {{ .Title }}</title>
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
+    <meta name="theme-color" content="#009688">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
@@ -56,10 +44,12 @@
           <div class="content">
             <div id="editor">
               <h1>In this edition</h1>
+              {{ if (ne .Editorial.Author "")}}
               <h5>By {{ .Editorial.Author }}</h5>
               <article>
                 {{ .Editorial.PostHTML }}
               </article>
+              {{ end }}
             </div>
             <div id="featured">
               <h2>Featured</h2>
