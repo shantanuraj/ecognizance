@@ -19,6 +19,9 @@ blockquote {
   padding-left: .75em;
   color: #595959; }
 
+@media only screen and (max-width: 600px) {
+  blockquote {
+    margin: 2em 1em 2em 1em; } }
 #scroll {
   border-top: 4px solid #009688;
   position: relative;
@@ -110,6 +113,9 @@ blockquote {
   margin: 2em 4em 2em 2em;
   color: #595959; }
 
+@media only screen and (max-width: 600px) {
+  .content ul, .content ol {
+    margin: 2em 1em 2em 1em; } }
 .tint {
   height: 100vh;
   width: 100%;
@@ -181,5 +187,3 @@ blockquote {
 .container {
   height: 100%;
   width: 100%; }
-
-/*# sourceMappingURL=dscecon-blog.css.map */
