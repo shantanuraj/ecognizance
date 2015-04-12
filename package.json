@@ -1,0 +1,29 @@
+{
+  "name": "ecognizance",
+  "version": "1.0.0",
+  "description": "An Economic ❤ Affair",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shantanuraj/ecognizance.git"
+  },
+  "keywords": [
+    "ecognizance",
+    "dscecon",
+    "du",
+    "blog",
+    "magazine"
+  ],
+  "author": "Shantanu <s@sraj.me>",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/shantanuraj/ecognizance/issues"
+  },
+  "homepage": "https://github.com/shantanuraj/ecognizance",
+  "dependencies": {
+    "gulp": "^3.8.11"
+  }
+}
