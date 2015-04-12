@@ -1,10 +1,10 @@
 {
-  "name": "ecog",
+  "name": "ecognizance",
   "version": "0.0.0",
   "authors": [
-    "Shantanu <shantanuraj@ovi.com>"
+    "Shantanu <s@sraj.me>"
   ],
-  "license": "MIT",
+  "license": "Apache",
   "private": true,
   "ignore": [
     "**/.*",
