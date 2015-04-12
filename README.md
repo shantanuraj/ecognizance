@@ -4,16 +4,16 @@ Source code for the custom blog engine (written in **Go**), and template HTML an
 
 Install dependencies
 ====================
-    $ cd ecog
+    $ cd app/code
     $ go get #Go dependencies.
-    $ cd public
+    $ cd ../public
     $ bower install #Frontend dependencies.
 
 Build
 =====
-From the ecog folder execute.
+From the app folder execute.
 
-    $ make ecog
+    $ go build -o ecog ./code
 
 ##Run
     $ make
